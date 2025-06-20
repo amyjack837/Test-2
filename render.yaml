@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-media-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    runtime:
+      python_version: 3.10
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
